@@ -1327,15 +1327,43 @@ void Renderer::setMenuText(const char* menuText, eTextPos textPos, word matrix[1
 void Renderer::setElise(word matrix[16])
 {
   matrix[0] |= 0b0000100000000000;   // E
-  matrix[1] |= 0b0000000000010000;   // L
+  matrix[1] |= 0b0000001000000000;   // L
   matrix[2] |= 0b0000000000000000;
-  matrix[3] |= 0b0000100000000000;   // I
+  matrix[3] |= 0b0000000010000000;   // I
   matrix[4] |= 0b0000000000000000;
-  matrix[5] |= 0b0000000000000100;   // S
+  matrix[5] |= 0b0000000010000000;   // S
   matrix[6] |= 0b0000000000000000;
   matrix[7] |= 0b0000000000000000;
-  matrix[8] |= 0b0000000000000000;
-  matrix[9] |= 0b0000000000001000;   // E
+  matrix[8] |= 0b0000000000100000;   // E
+  matrix[9] |= 0b0000000000000000;
+}
+
+void Renderer::setMaelie(word matrix[])
+{
+  matrix[0] |= 0b0000000000000000;
+  matrix[1] |= 0b000000000000000;
+  matrix[2] |= 0b0000000000000000;
+  matrix[3] |= 0b0000000000000000;
+  matrix[4] |= 0b0000000000000000;
+  matrix[5] |= 0b0000000000000000;
+  matrix[6] |= 0b0000011100000000; // MAE
+  matrix[7] |= 0b0000100000000000; // L
+  matrix[8] |= 0b0000100000000000; // I
+  matrix[9] |= 0b0010000000000000; // E
+}
+
+void Renderer::setPietro(word matrix[])
+{
+    matrix[0] |= 0b0000000100000000; // P
+    matrix[1] |= 0b0000000000000000; //
+    matrix[2] |= 0b0000000000000000;
+    matrix[3] |= 0b0000100000000000; // I
+    matrix[4] |= 0b0000000100000000; // E
+    matrix[5] |= 0b0000100000000000; // T
+    matrix[6] |= 0b0000000000000000;
+    matrix[7] |= 0b0000000010100000; // RO
+    matrix[8] |= 0b0000000000000000; //
+    matrix[9] |= 0b0000000000000000;
 }
 
 boolean Renderer::isNumber(char symbol) {

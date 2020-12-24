@@ -950,6 +950,22 @@ void loop() {
           break;
         }
 
+        if(   (   rtc.getHours() + settings.getTimeShift() == 11
+               || rtc.getHours() + settings.getTimeShift() == 23)
+           && rtc.getMinutes() == 28)
+        {
+          renderer.setMaelie(matrix);
+          break;
+        }
+
+        if(   (   rtc.getHours() + settings.getTimeShift() == 4
+               || rtc.getHours() + settings.getTimeShift() == 16)
+           && rtc.getMinutes() == 20)
+        {
+          renderer.setPietro(matrix);
+          break;
+        }
+
         renderer.setMinutes(rtc.getHours() + settings.getTimeShift(), rtc.getMinutes(), settings.getLanguage(), matrix);
         renderer.setCorners(rtc.getMinutes(), settings.getRenderCornersCw(), matrix);
         break;

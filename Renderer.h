@@ -74,6 +74,8 @@ class Renderer {
     void setMenuText(const char* menuText, eTextPos textPos, word matrix[16]);
 
     void setElise(word matrix[16]);
+    void setMaelie(word matrix[16]);
+    void setPietro(word matrix[16]);
 
   private:
     void setHours(byte hours, boolean glatt, byte language, word matrix[16]);
