@@ -1324,6 +1324,20 @@ void Renderer::setMenuText(const char* menuText, eTextPos textPos, word matrix[1
   }
 }
 
+void Renderer::setElise(word matrix[16])
+{
+  matrix[0] |= 0b0000100000000000;   // E
+  matrix[1] |= 0b0000000000010000;   // L
+  matrix[2] |= 0b0000000000000000;
+  matrix[3] |= 0b0000100000000000;   // I
+  matrix[4] |= 0b0000000000000000;
+  matrix[5] |= 0b0000000000000100;   // S
+  matrix[6] |= 0b0000000000000000;
+  matrix[7] |= 0b0000000000000000;
+  matrix[8] |= 0b0000000000000000;
+  matrix[9] |= 0b0000000000001000;   // E
+}
+
 boolean Renderer::isNumber(char symbol) {
   if ( (symbol >= '0') && (symbol <= '9') ) {
     return true;

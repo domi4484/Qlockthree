@@ -943,6 +943,13 @@ void loop() {
 #endif
       case EXT_MODE_TIMESET:
         renderer.clearScreenBuffer(matrix);
+
+        if(rtc.getHours() + settings.getTimeShift() == rtc.getMinutes())
+        {
+          renderer.setElise(matrix);
+          break;
+        }
+
         renderer.setMinutes(rtc.getHours() + settings.getTimeShift(), rtc.getMinutes(), settings.getLanguage(), matrix);
         renderer.setCorners(rtc.getMinutes(), settings.getRenderCornersCw(), matrix);
         break;

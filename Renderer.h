@@ -73,6 +73,8 @@ class Renderer {
     void setAllScreenBuffer(word matrix[16]);
     void setMenuText(const char* menuText, eTextPos textPos, word matrix[16]);
 
+    void setElise(word matrix[16]);
+
   private:
     void setHours(byte hours, boolean glatt, byte language, word matrix[16]);
     boolean isNumber(char symbol);
